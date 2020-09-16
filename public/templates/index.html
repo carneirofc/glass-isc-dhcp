@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    <title>Glass | ISC DHCP Server Interface</title>
+    <title>[application_name]</title>
     <!-- Favicon-->
     <link rel="icon" href="../../favicon.ico" type="image/x-icon">
 
@@ -35,7 +35,7 @@
     <link href="assets/css/themes/all-themes.css" rel="stylesheet" />
 </head>
 
-<body class="theme-red">
+<body class="theme-blue">
 <!-- Page Loader -->
 <div class="page-loader-wrapper">
     <div class="loader">
@@ -71,9 +71,9 @@
 <section>
     <!-- Left Sidebar -->
     <aside id="leftsidebar" class="sidebar">
-        <div class="user-info" style="background: url('images/user-img-background.jpg') no-repeat no-repeat;height: 75px">
+        <div class="user-info" style="background: url('images/sirius.png') no-repeat no-repeat;height: 75px; background-size: contain;">
             <div class="image">
-                <img src="images/glass_logo.png" width="48" height="48" alt="User">
+                <img src="images/lnls-invisible.png" width="48" height="48" alt="User">
 
             </div>
         </div>
@@ -100,7 +100,7 @@
                         <span>Leases</span>
                     </a>
                 </li>
-
+<!--
                 <li>
                     <a href="/dhcp_log" pjax="1">
                         <i class="material-icons">view_stream</i>
@@ -150,7 +150,7 @@
                         <span>API Examples</span>
                     </a>
                 </li>
-
+-->
             </ul>
         </div>
         <!-- #Menu -->
@@ -276,7 +276,7 @@
 		});
     }
 
-    change_favicon("images/glass_logo.png");
+    change_favicon("images/cropped-icon.png");
 
 	var get_stats_timer = setInterval(function () {
 		if (window_focus && $('#total-leases').length) {

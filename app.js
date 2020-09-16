@@ -30,22 +30,22 @@ if (glass_config.ip_ranges_to_allow[0] !== "") {
  * Normal web routes
  */
 app.use('/', require('./routes/index'));
-app.use('/users', require('./routes/users'));
+//app.use('/users', require('./routes/users'));
 app.use('/get_stats', require('./routes/get_stats'));
 app.use('/dhcp_statistics', require('./routes/dhcp_statistics_page'));
 app.use('/dhcp_leases', require('./routes/dhcp_leases'));
 app.use('/dhcp_lease_search', require('./routes/dhcp_lease_search'));
-app.use('/dhcp_log', require('./routes/dhcp_log'));
-app.use('/dhcp_config', require('./routes/dhcp_config'));
-app.use('/dhcp_config_snapshots', require('./routes/dhcp_config_snapshots'));
-app.use('/dhcp_config_snapshot_view', require('./routes/dhcp_config_snapshot_view'));
-app.use('/dhcp_config_save', require('./routes/dhcp_config_save'));
-app.use('/dhcp_start_stop_restart', require('./routes/dhcp_start_stop_restart'));
-app.use('/api_examples', require('./routes/api_examples'));
-app.use('/glass_settings', require('./routes/glass_settings'));
-app.use('/glass_alerts', require('./routes/glass_alerts'));
-app.use('/glass_alert_settings_save', require('./routes/glass_alert_settings_save'));
-app.use('/glass_settings_save', require('./routes/glass_settings_save'));
+//app.use('/dhcp_log', require('./routes/dhcp_log'));
+//app.use('/dhcp_config', require('./routes/dhcp_config'));
+//app.use('/dhcp_config_snapshots', require('./routes/dhcp_config_snapshots'));
+//app.use('/dhcp_config_snapshot_view', require('./routes/dhcp_config_snapshot_view'));
+//app.use('/dhcp_config_save', require('./routes/dhcp_config_save'));
+//app.use('/dhcp_start_stop_restart', require('./routes/dhcp_start_stop_restart'));
+//app.use('/api_examples', require('./routes/api_examples'));
+//app.use('/glass_settings', require('./routes/glass_settings'));
+//app.use('/glass_alerts', require('./routes/glass_alerts'));
+//app.use('/glass_alert_settings_save', require('./routes/glass_alert_settings_save'));
+//app.use('/glass_settings_save', require('./routes/glass_settings_save'));
 
 /**
  * API Routes
@@ -121,7 +121,7 @@ try {
 let oui_reader           = require('./core/oui-reader');
 let dhcp_leases          = require('./core/dhcp-leases');
 let glass_config_watcher = require('./core/glass-config-watcher');
-let dhcp_log_watcher     = require('./core/dhcp-log-watcher');
+//let dhcp_log_watcher     = require('./core/dhcp-log-watcher');
 let app_timers           = require('./core/app-timers');
 
 /**
@@ -132,7 +132,7 @@ dhcp_leases.parseLeasesFileOnce(glass_config);
 dhcp_leases.startLeaseListener(glass_config);
 dhcp_leases.setLeasesCleanTimer();
 glass_config_watcher.init();
-dhcp_log_watcher.init(glass_config);
+//dhcp_log_watcher.init(glass_config);
 
 /**
  * Timers
